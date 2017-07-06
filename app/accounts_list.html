@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th><a class="btn btn-default btn-xs" ng-click="Accounts.addNew()">Add New Account</a></th>
+  </tr>
+  <tr ng-repeat="account in Accounts.ac.accounts">
+    <td>{{account.name}}</td>
+    <td>
+      <button class="btn btn-default btn-xs" ng-click="Accounts.edit(account.id)">
+        <span class="glyphicon glyphicon-pencil" title="Edit"></span>
+      </button>
+      <button class="btn btn-default btn-xs" ng-click="Accounts.delete(account.id)">
+        <span class="glyphicon glyphicon-trash" title="Remove"></span>
+      </button>
+      <button class="btn btn-default btn-xs" ng-click="Accounts.invoices(account.id)">Invoices</button>
+    </td>
+  </tr>
+</table>

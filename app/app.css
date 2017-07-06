@@ -1,0 +1,6 @@
+/* app css stylesheet */
+
+th, td { padding: 3px; }
+
+.control-label { width: 120px; }
+.ml125 { margin-left:125px; }

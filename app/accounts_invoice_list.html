@@ -1,0 +1,25 @@
+<h4> Account "{{Accounts.ac.account.name}}" Invoices </h4>
+
+<table>
+  <tr>
+    <th>Account ID</th><th>Invoice ID</th><th>Invoice Name</th><th>Invoice Amount</th><th>Amount Due</th>
+    <th>
+      <a class="btn btn-default btn-xs" ng-click="Invoices.addNew(Accounts.ac.account.id)">Add New Invoice</a>
+    </th>
+  </tr>
+  <tr ng-repeat="invoice in Accounts.ac.account.invoices">
+    <td>{{invoice.accountId}}</td>
+    <td>{{invoice.id}}</td>
+    <td>{{invoice.name}}</td>
+    <td>{{invoice.amount}}</td>
+    <td>{{invoice.due}}</td>
+    <td>
+      <button class="btn btn-default btn-xs" ng-click="Invoices.edit(Accounts.ac.account.id, invoice.id)">
+        <span class="glyphicon glyphicon-pencil" title="Edit"></span>
+      </button>
+      <button class="btn btn-default btn-xs" ng-click="Invoices.delete(Accounts.ac.account.id, invoice.id)">
+        <span class="glyphicon glyphicon-trash" title="Remove"></span>
+      </button>
+    </td>
+  </tr>
+</table>
